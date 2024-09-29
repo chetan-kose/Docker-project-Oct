@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  movies:
+    image: chetankose/googlemovies:latest
+    ports:
+      - 81:80
+    deploy:
+      replicas: 3
+  train:
+    image: chetankose/googletrain:latest
+    ports:
+      - 82:80
+    deploy:
+      replicas: 3
+  dth:
+    image: chetankose/googledth:latest
+    ports:
+      - 83:80
+    deploy:
+      replicas: 3
